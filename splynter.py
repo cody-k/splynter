@@ -8,6 +8,8 @@
 import wx
 import ctypes
 import pygame
+import utility.directkeys
+import utility.window_helper
 
 # GLOBAL VARS
 user32 = ctypes.windll.user32
@@ -42,7 +44,7 @@ class MainWindow(wx.Frame):
 		# Main Panel
 		pygame.mixer.init(48000, -16, 4, 1024)
 		pygame.mixer.music.load("audio/0004.mp3")
-		pygame.mixer.music.set_volume(0.2)
+		pygame.mixer.music.set_volume(0.01)
 		panel = wx.Panel(self)
 		self.SetBackgroundColour(wx.Colour(35, 37, 48))
 		self.startImage = wx.Image("images/png/startbutton.png", wx.BITMAP_TYPE_PNG).ConvertToBitmap()
@@ -71,14 +73,13 @@ class MainWindow(wx.Frame):
 		self.startButton.Bind(wx.EVT_LEAVE_WINDOW, self.HoverLeave)
 		self.SetIcon(iconImage)
 
-		# self.Bind(wx.EVT_PAINT, self.OnPaint)
 		self.startButton.SetDefault()
-
 
 		# Show Window
 		self.Show(True)
 
 
+	# Functions
 
 	def OnAbout(self, e):
 		abt = wx.MessageDialog(self, "Created by: Cody Keller\n--------------------------\nhttps://github.com/cody-k","About", wx.OK)
