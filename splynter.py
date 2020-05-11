@@ -22,7 +22,7 @@ class MainWindow(wx.Frame):
 		wx.Frame.__init__(self, parent, title=title, size=(winWidth,winHeight), style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER ^ wx.MAXIMIZE_BOX)
 		self.Center()
 
-		# Create File Menu & Set Icon for Splyntery
+		# Create File Menu & Set Icon for Splynter
 		filemenu = wx.Menu()
 		iconImage = wx.Icon()
 		iconImage.CopyFromBitmap(wx.Bitmap("images/png/icon.png", wx.BITMAP_TYPE_ANY))
@@ -112,7 +112,7 @@ class MainWindow(wx.Frame):
 
 # START APPLICATION
 app = wx.App(False)
-frame = MainWindow(None, 'Splyntery')
+frame = MainWindow(None, 'Splynter')
 frame.Show()
 
 app.MainLoop()
