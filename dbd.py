@@ -109,7 +109,7 @@ class MainWindow(wx.Frame):
 
 # START APPLICATION
 app = wx.App(False)
-frame = MainWindow(None, 'DBD Bloodweb Autopather')
+frame = MainWindow(None, 'Splyntery')
 frame.Show()
 
 app.MainLoop()
